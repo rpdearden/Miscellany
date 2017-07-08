@@ -1,0 +1,3 @@
+**This is a selection of amusing and/or wise quotes I have collected from the literature**
+
+* "On one small slab, less than 8 inches square, in my possession, covered with scales and other remains of the larger Euthaca~thus, upwards of two dozen may be counted, attracted evidently by the dead Fish, only to be silted up and entombed with the Euthacanthus on which they feasted." Powrie (1864) On the fossiliferous rocks of Forfarshire and their contents
