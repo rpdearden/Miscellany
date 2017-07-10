@@ -16,9 +16,12 @@ Like all (?) illustration programs Inkscape works on a canvas, which can be mani
 Objects can be imported and manipulated in Inkscape - I use this to make posters and figures.
 * *Open images* Various kinds of image can be opened in Inkscape, both vector and bitmap format.
 * *Import images* You can also import images into Inkscape
+![Opening](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Ink_Opening.png "Opening stuff")
+
+
 * *Shapes* A number of shapes are createable in Inkscape
 * *Text* You can create regions of text
-![Objects](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Ink_Objects.png "Document properties")
+![Objects](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Ink_Objects.png "Object options")
 
 * *Colouring objects* The colour of both the stroke (line) and fill (inside) of objects can be manipulated, either by choosing a colour, by hexcode, or by using the pipette. Can also do gradients
 * *Grouping*
@@ -32,7 +35,7 @@ Drawing can be useful for simplifying bitmap images, or for redrawing parts of l
 * *Freehand drawing* Freehand drawing does what it says on the tin - note if you finish a line early you can join to the nodes at the end.  There are various settings at the top.
 * *Bezier curves* Bezier curves are useful for drawing - they consist of lines linking nodes.  Lines can be either left straight, or curved by either dragging or by manipulating the handles.
 * *Calligraphy* I haven't used this much, but you can also do calligraphic drawing.
-![Drawing](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Ink_Drawing.png "Document properties")
+![Drawing](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Ink_Drawing.png "Drawing options")
 
 * *Joining up dem lines* If you join up the lines you create an object- this can then be filled
 
@@ -41,6 +44,8 @@ Drawing can be useful for simplifying bitmap images, or for redrawing parts of l
 If you're too lazy to draw there is another path if you have a bitmap image that you need to turn in to a vector  - this is useful if you have to scale it up and don't want to lose resolution, or for images that need to be submitted in vector format (eg. t-shirt prints).
 It works well for basic images, such as those formed by a series of lines, and badly for those that are complicated .
 Inkscape has a number of methods of doing this, each of which has its advantages and disadvantages for different kinds of image.
+![Tracing](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Ink_Tracing.png "Tracing bitmaps")
+
 
 ***
 **Exporting the finished product**
@@ -48,6 +53,7 @@ Inkscape imports in a wide range of formats - I won't go through all of them, bu
 *The default kind is an Inkscape SVG (.svg) file - these only open in Inkscape and other specialist Illustrator programs.
 *You can export your files as .pngs - this is what I usually do (at the required size)
 *If you want to preserve the vector encoding of your image, you will have to export it in a format that does so - one is .pdf, but I'm sure there are more.
+![Exporting](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Ink_Export.png "Exporting options")
 
 ***
 
