@@ -9,7 +9,7 @@ Cons include that it can be a bit clunky, particularly on Macs where you have to
 **The Canvas**
 Like all (?) illustration programs Inkscape works on a canvas, which can be manipulated
 * *Changing size* This is done in the Properties tab
-![alt text](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Properties.png "Document properties")
+![Properties](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Ink_Properties.png "Document properties")
 
 ***
 **Importing/manipulating objects**
@@ -18,6 +18,7 @@ Objects can be imported and manipulated in Inkscape - I use this to make posters
 * *Import images* You can also import images into Inkscape
 * *Shapes* A number of shapes are createable in Inkscape
 * *Text* You can create regions of text
+![Objects](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Ink_Objects.png "Document properties")
 * *Colouring objects* The colour of both the stroke (line) and fill (inside) of objects can be manipulated, either by choosing a colour, by hexcode, or by using the pipette. Can also do gradients
 * *Grouping*
 * *Layers*
@@ -30,6 +31,7 @@ Drawing can be useful for simplifying bitmap images, or for redrawing parts of l
 * *Freehand drawing* Freehand drawing does what it says on the tin - note if you finish a line early you can join to the nodes at the end.  There are various settings at the top.
 * *Bezier curves* Bezier curves are useful for drawing - they consist of lines linking nodes.  Lines can be either left straight, or curved by either dragging or by manipulating the handles.
 * *Calligraphy* I haven't used this much, but you can also do calligraphic drawing.
+![Drawing](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Ink_Drawing.png "Document properties")
 * *Joining up dem lines* If you join up the lines you create an object- this can then be filled
 
 ***
