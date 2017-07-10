@@ -1,9 +1,9 @@
 **Introduction to Inkscape**
-This is an introduction to the free vector software Inkscape, originally written for the [Silwood Park](URL) Computer Skillz workshop.
+This is an introduction to the free vector software Inkscape, originally written for the [Silwood Park](http://www.imperial.ac.uk/silwood-park/) Computer Skillz workshop.
 It is not intended to be even slightly comprehensive, but is instead an introduction to what I use the software for (such as making figures for scientific publication, or posters).
 The same mad skillz could however equally well applied to making other graphics, such as stag-do t-shirts or dank memes.
-Inkscape is very well documented online, both by Inkscape themselves [here](URL) and by wise sages advising clueless idiots like me on forums like Stack Exchange [JFGI](www.google.com).
-Pros of Inkscape are that it is free and basically does what expensive programs like Illustrator do, and that it is a Vector program, so can deal with vector graphics (see [here](URL) for an explanation of what that means).
+Inkscape is very well documented online, both by Inkscape themselves [here](https://inkscape.org/en/learn/) and by wise sages advising clueless idiots like me on forums like Stack Exchange, which can best be found [here](http://www.lmfgtfy.com/).
+Pros of Inkscape are that it is free and basically does what expensive programs like Illustrator do, and that it is a Vector program, so can deal with vector graphics (see [here](http://www.bbc.co.uk/schools/gcsebitesize/dida/graphics/bitmapvectorrev3.shtml) for an explanation of what that means).
 Cons include that it can be a bit clunky, particularly on Macs where you have to run it via XQuartz which allows cross-platform programs to run on mac (note that for hotkeys this means that you use ctrl like on windows, rather than cmd like on most mac programs).
 ***
 **The Canvas**
