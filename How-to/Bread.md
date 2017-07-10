@@ -17,7 +17,7 @@
 * Although PH recommends using a dough hook, I've found this works with your hands
 
 ***
-**Foccacia**
+**Focaccia**
 [Quantities from [Paul Hollywood](http://www.bbc.co.uk/food/recipes/focaccia_08389)]
 * 500g strong white flour, 2 tsp salt, 2 tbsp oil, 2 tsp yeast, 2 tsp sugar, 300ml warm water
 * Make dough as with white but knead in oil.  On rising (second, not proving) put on tray, drizzle in oil and poke dimples into surface.
