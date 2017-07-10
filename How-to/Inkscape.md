@@ -4,7 +4,7 @@ It is not intended to be even slightly comprehensive, but is instead an introduc
 The same mad skillz could however equally well applied to making other graphics, such as stag-do t-shirts or dank memes.
 Inkscape is very well documented online, both by Inkscape themselves [here](URL) and by wise sages advising clueless idiots like me on forums like Stack Exchange [JFGI](www.google.com).
 Pros of Inkscape are that it is free and basically does what expensive programs like Illustrator do, and that it is a Vector program, so can deal with vector graphics (see [here](URL) for an explanation of what that means).
-Cons include that it can be a bit clunky, particularly on Macs where you have to run it via XQuartz, a windows emulator (this means that you use ctrl like on windows, rather than cmd like on most mac programs).
+Cons include that it can be a bit clunky, particularly on Macs where you have to run it via XQuartz which allows cross-platform programs to run on mac (note that for hotkeys this means that you use ctrl like on windows, rather than cmd like on most mac programs).
 ***
 **The Canvas**
 Like all (?) illustration programs Inkscape works on a canvas, which can be manipulated
@@ -19,14 +19,15 @@ Objects can be imported and manipulated in Inkscape - I use this to make posters
 ![Opening](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Ink_Opening.png "Opening stuff")
 
 
-* *Shapes* A number of shapes are createable in Inkscape
+* *Shapes* A number of shapes are createable in Inkscape - polygons, circles, and squares
 * *Text* You can create regions of text
 ![Objects](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Ink_Objects.png "Object options")
 
 * *Colouring objects* The colour of both the stroke (line) and fill (inside) of objects can be manipulated, either by choosing a colour, by hexcode, or by using the pipette. Can also do gradients
-* *Grouping*
-* *Layers*
-* *Guides*
+* *Manipulating objects* Objects can be manipulated by the handles.  Left click twice to get rotatey handles, and hold ctrl to scale isometrically.
+* *Grouping* Group objects to get them to move and behave together - select multiple objects by shift-left clicking
+* *Layers* You can assign objects to different layers using the layers menu - you can move layers up and down and hide them. 
+* *Guides*  Guides can be dragged from the rulers at the top and sides - objects will snap to them so they're useful for organising stuff. rotte them by holding shift, or shift-ctrl for 15 degree rotations.  Get rid of them by dragging them to a ruler or going to edit-delete all guides
 * *Other tools* There are various other tools you should have a play with, such as 3D boxes and spray
 
 ***
@@ -36,8 +37,7 @@ Drawing can be useful for simplifying bitmap images, or for redrawing parts of l
 * *Bezier curves* Bezier curves are useful for drawing - they consist of lines linking nodes.  Lines can be either left straight, or curved by either dragging or by manipulating the handles.
 * *Calligraphy* I haven't used this much, but you can also do calligraphic drawing.
 ![Drawing](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Ink_Drawing.png "Drawing options")
-
-* *Joining up dem lines* If you join up the lines you create an object- this can then be filled
+* *Joining up dem lines* If you join up the lines by their end nodes you create an object- this can then be filled.  This is useful for drawing irregular shapes.
 
 ***
 **Converting bitmap graphics into vector graphics** 
