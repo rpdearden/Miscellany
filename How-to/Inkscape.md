@@ -57,5 +57,5 @@ Inkscape imports in a wide range of formats - I won't go through all of them, bu
 
 ***
 
-**The future**
-This has been super basic - if you have any problems feel free to email me on r.dearden14@imperial.ac.uk
+**Your future with Inkscape**
+This has been super basic, the best way to learn is to try and make a poster or figure. If you have any problems or specific questions feel free to email me on r.dearden14@imperial.ac.uk
