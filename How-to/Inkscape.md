@@ -9,7 +9,7 @@ Cons include that it can be a bit clunky, particularly on Macs where you have to
 **The Canvas**
 Like all (?) illustration programs Inkscape works on a canvas, which can be manipulated
 * *Changing size* This is done in the Properties tab
-![alt text](https://github.com/rpdearden/Miscellany/How-to/Images/Properties.png "Document properties")
+![alt text](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Properties.png "Document properties")
 
 ***
 **Importing/manipulating objects**
