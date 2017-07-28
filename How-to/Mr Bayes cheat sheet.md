@@ -7,6 +7,9 @@
 #Create Log
 log start filename=MrBayes_practical.txt
 
+#Set Directory
+set dir=/Users/rpd14/Documents
+
 #Execute file
 Execute /Users/rpd14/Documents/PhD/MrBayesfiles/Thomas_MrBayes/Data/TotalEvidence_Primates.nex
 
@@ -63,3 +66,16 @@ sump burnin = 250
 
 Summarise trees (with burnin at 25% of samples)
 sumt burnin = 250
+
+***
+**APPENDING ANALYSES**
+If you end an analysis early you can continue to run it via the checkpoint files (.ckp) that MrBayes produces.
+I had a bit of trouble getting this to work, but the steps I originally used were (including some which might be unnecessary):
+
+* Ensure all output files have same names as before (including log I think)
+* Setting the directory (not sure this actually makes a difference, but it worked after)
+* Executing the original matrix
+* Setting the model and prior (as previously used, with prset and lset)
+* running the mcmc, defining the ngen (including those already run+your additional ones) your sample frequency (obvs identical to before) and setting append=yes.
+* eg. mcmc ngen=12000000 (orig. 10000000+add.2000000) samplefreq=1000 append=yes;
+* This should then run the analysis continously

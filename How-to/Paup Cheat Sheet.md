@@ -12,8 +12,11 @@ Log File=Filename.log;
 **Read in Matrix**
 Execute Filename.nex;
 
-**Read in constraints from .tre file**
+**Read in monophyly constraint from .tre file**
 Loadconstr File=Filename.tre;
+
+**Read in backbone constraint from .tre file**
+Loadconstr File=Filename.tre Asbackbone = yes;
 
 **Show active constraints**
 Showconstr
