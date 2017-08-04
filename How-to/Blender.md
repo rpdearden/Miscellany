@@ -1,0 +1,64 @@
+**Hard things in Blender**
+
+* * * 
+
+**Setting up a turntable animation**
+
+From [here](www.blenderguru.com/tutorials/turntable-animation)
+
+* Add an empty
+* Parent all objects in model to empty
+* Ensure on first frame
+* Add a keyframe to the z-rotation (by right-clicking)
+* Move to one frame after the last one (to create a seamless loop
+* Set rotation to 360 and add another keyframe
+* Open the graph editor
+* Set interpolation to linear
+
+* * *
+
+**Making a video with a transparent background**
+
+*Can't really get this to work properly*
+
+*Can export transparent .png by Setting Alpha to transparent and colours to RGBA
+*Convert into format that supports transparency?
+
+* * *
+
+**Change background**
+
+* Go to world tab
+* Change "horizon" colour
+
+* * *
+
+**Making an object (ie. matrix) transparent with something inside**
+
+Put together from various internet forums - may not be the best way of doing it
+
+* Drag across + and set shading to GLSL (from multitexture) - n.b. can't see what this does, but a Youtube Man told me I had to do it so it must be true.
+* Tick Transparency and set to Z transparency (alpha level changes transparency.
+* Another suggestion was to put them into layers and associate light to allow for different lighting set ups 
+* Choose inner object and set to Shadow -> Receive transparent shadows.  This allows light to penetrate the outer object.
+
+* * * 
+
+**Doing it with Layers**
+
+* You can put things in separate layers - do this by pressing m.  These layers are represented by a row of boxes at the bottom.
+* If you tick the "This layer only" lamp box you can restrict them to specific layers
+* This is useful in combination with the transparency above
+
+* * *
+
+**Parenting**
+* Parent using Ctrl+P
+* Unparent using Alt+P (can keep transform)
+
+* * *
+
+**Materials**
+
+* Make several objects same material - change one, then select all others, Ctrl L and link material
+

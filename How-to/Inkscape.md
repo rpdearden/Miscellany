@@ -40,6 +40,10 @@ Drawing can be useful for simplifying bitmap images, or for redrawing parts of l
 * *Joining up dem lines* If you join up the lines by their end nodes you create an object- this can then be filled.  This is useful for drawing irregular shapes.
 
 ***
+**Cropping an image**
+There's no obvious crop tool in inkscape, but if you draw a rectangle over the area you want to crop to, select it and the object you want to crop (with shift) and then click Object->Clip->Set, it should do the trick. 
+
+***
 **Converting bitmap graphics into vector graphics** 
 If you're too lazy to draw there is another path if you have a bitmap image that you need to turn in to a vector  - this is useful if you have to scale it up and don't want to lose resolution, or for images that need to be submitted in vector format (eg. t-shirt prints).
 It works well for basic images, such as those formed by a series of lines, and badly for those that are complicated .
