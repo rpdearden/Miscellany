@@ -79,3 +79,5 @@ I had a bit of trouble getting this to work, but the steps I originally used wer
 * running the mcmc, defining the ngen (including those already run+your additional ones) your sample frequency (obvs identical to before) and setting append=yes.
 * eg. mcmc ngen=12000000 (orig. 10000000+add.2000000) samplefreq=1000 append=yes;
 * This should then run the analysis continously
+
+mcmc ngen=10000000 samplefreq=1000 append=yes;

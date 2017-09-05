@@ -51,3 +51,21 @@ ConTree All / Strict=yes Majrule=yes TreeFile=Filename.tre;
 
 **Stop log**
 Log Stop=yes;
+
+**Apomorphy list**
+describe 1 /Apolist opt=deltran
+
+**Bootstrapping**
+bootstrap nreps=100 search=heuristic /addseq=random;
+
+**save trees with bootstrap values - ie. resample with replacement**
+savetrees from=1 to=1 savebootp=nodelabels file=filename.tre;
+
+**Bremer support values (indirect) - how many additional steps does it take for the node to break down?**
+* Run search
+* Run search again, retaining all trees of MPT+5 steps
+	. hsearch keep="MPT+5";
+* make a strict consensus
+* All nodes that remain have Bremer score of 5 (highest)
+* Filter through going down - as nodes are lost they are their Bremer decay indices
+	filter maxscore=MPT+4;
