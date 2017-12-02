@@ -62,3 +62,22 @@ Put together from various internet forums - may not be the best way of doing it
 
 * Make several objects same material - change one, then select all others, Ctrl L and link material
 
+* * *
+
+**Sculpting**
+
+Much of this is based on [this](https://cgi.tutsplus.com/articles/sculpt-model-and-texture-a-low-poly-skull-in-blender--cg-7)
+
+* Import background images to sculpt to: I've found it's easiest to create an empty, change its type to image and load up an image
+* Get cube, turn into multires by clicking on modifiers (spanner) and changing to multiresolution - then click subdivide 3 times to make into sphere, followed by apply
+
+
+
+
+
+
+
+
+
+
+

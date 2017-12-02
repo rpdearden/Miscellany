@@ -27,7 +27,6 @@ Outgroup taxon;
 **root on outgroup**
 set root = outgroup;
 
-
 **Delete taxa**
 Delete List taxa with commas
 ?
@@ -51,6 +50,12 @@ ConTree All / Strict=yes Majrule=yes TreeFile=Filename.tre;
 
 **Stop log**
 Log Stop=yes;
+
+**Read in tree**
+Gettrees file=filename;
+
+**Agreement subtree**
+Agree [trees];
 
 **Apomorphy list**
 describe 1 /Apolist opt=deltran
