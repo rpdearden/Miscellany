@@ -1,6 +1,5 @@
 **TNT CHEAT SHEET**
-Assembled from the internets, and the notes of Mr Ryan Marek
-
+Assembled from the internets, and the notes of Mr Ryan Marek.
 **A selection of simple tnt commands with reminders as to what they do**
 ***
 

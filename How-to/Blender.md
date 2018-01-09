@@ -71,9 +71,16 @@ Much of this is based on [this](https://cgi.tutsplus.com/articles/sculpt-model-a
 * Import background images to sculpt to: I've found it's easiest to create an empty, change its type to image and load up an image
 * Get cube, turn into multires by clicking on modifiers (spanner) and changing to multiresolution - then click subdivide 3 times to make into sphere, followed by apply
 
+**General useful things**
 
+* You can append library information from other .blend files (for example materials) using File -> Append
 
+**Specimen Lighting Tips**
 
+* Use a single wide spotlamp with a distance that falls just short of the specimen and have it quite close
+* Play around with blend, samples and soft size to make softer shadows
+* Don't underlight it
+* Reduce the specular light to get more of an ammonium chloride feel to virtual casts
 
 
 
