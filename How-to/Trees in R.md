@@ -39,6 +39,8 @@ tiplabels(cex=0.5)
 dev.off()
 **Extracting posterior probabilities from MrBayes output**
 
+```r
+
 #load phylotate + ape
 library(ape)
 library(phylotate)
@@ -72,11 +74,10 @@ nodes2<- lapply(nodes, MultRound)
 
 #Plot output as pdf - node labels specified have to be exactly all internal nodes, or the node values will shift
 pdf("tree.pdf", width=5, height=7)
-
 plot(tree, cex=0.7, show.node.label=TRUE, use.edge.length=FALSE, adj=0, label.offset=0.5)
 nodelabels(nodes2[41:72], adj=c(1,1.5), frame="none", cex=0.5)
-
 dev.off()
 
+```
 
 

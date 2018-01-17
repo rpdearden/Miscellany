@@ -42,6 +42,7 @@ Put together from various internet forums - may not be the best way of doing it
 * Another suggestion was to put them into layers and associate light to allow for different lighting set ups 
 * Choose inner object and set to Shadow -> Receive transparent shadows.  This allows light to penetrate the outer object.
 
+* I find the above makes objects cast coloured shadows even when solid, which is really annoying - how to solve?
 * * * 
 
 **Doing it with Layers**

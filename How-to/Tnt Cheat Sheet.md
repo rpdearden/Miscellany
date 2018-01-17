@@ -6,8 +6,18 @@ Assembled from the internets, and the notes of Mr Ryan Marek.
 **Set directory**
 cdir DIRECTORY;
 
+**Run log**
+log Fish.log;
+
 **list commands**
 help ;
+
+**read in constraint**
+* I find this easiest to do by combing the constraint tree with your data in mesquite and exporting as a tnt file.
+force =&N; (where N is the tree number, so probably 0)
+
+**Enforce constraint**
+constrain =;
 
 **Process file**
 proc FILENAME.tnt;
@@ -18,6 +28,9 @@ outgroup OUTGROUP
 **Make terminal nodes taxon names**
 taxname= ;
 
+**increase memory allocation**
+
+
 **Change tree buffer**
 hold 10000
 
@@ -25,7 +38,7 @@ hold 10000
 ienum ;
 
 **Random addition sequences (example with tbr, 1000replicates, holding 10 trees at each step)**
-mult= tbr replic 1000 hold 10 ;
+mult= tbr ratchet replic 10000 hold 100 ;
 
 **Plot all trees**
 tplot ;
@@ -40,9 +53,19 @@ majority ;
 map ;
 
 **Saving trees(tnt does this weirdly, you have to open, export, and close a tree file. Below will export both a tree file and a nexus file with matrix + trees**
-tsave *filename.tre
-export *filename.nex
+tsave *trees.tre
+export *trees.nex
 tsave/;
+
+**Print majority svg**
+ttags= ;
+majority ;
+ttag &Majority.svg ;
+
+**Print strict svg**
+ttags= ;
+qnelsen ;
+ttag &Strict.svg;
 
 **Bootstrapping (with svg print)**
 ttags= ;
