@@ -46,6 +46,36 @@ tiplabels(cex=0.5)
 dev.off()
 ```
 
+**Making strict consensus trees**
+* I particularly use this for tnt output, in which the outputted trees are an absolute pain in the arse to deal with - to do this I first import the trees from the tnt output nexus into mesquite and export them as a nexus file.
+```r
+strictcon <- consensus(trees, p=1)
+pdf("Strict.pdf", width=7, height=20)
+plot(strictcon, cex=0.7, show.node.label=TRUE, use.edge.length=FALSE, adj=0, label.offset=0.5)
+dev.off()
+```
+
+**Making majority rule consensus trees**
+* I particularly use this for tnt output, in which the outputted trees are an absolute pain in the arse to deal with and svg consensuses ugly - to do this I first import the trees from the tnt output nexus into mesquite and export them as a nexus file.
+* I dug the consensus method out from [here](http://grokbase.com/t/r/r-sig-phylo/095jx67dge/consensus-frequencies)
+```r
+#Make majority tree
+majcon <- consensus(trees, p=0.5)
+#Work out node values
+nodeconc<-prop.clades(majcon, trees)/length(trees)
+#Function from below to make these into percentages
+MultRound <- function(nodes){
+			(signif(nodes, digits=2))*100
+				}
+#Do it
+nodeperc<- lapply(nodeconc, MultRound)
+#Plot pdf - twiddle with settings
+pdf("Majority.pdf", width=7, height=20)
+plot(majcon, cex=0.7, show.node.label=TRUE, use.edge.length=FALSE, adj=0, label.offset=0.5)
+nodelabels(nodeperc, adj=c(1,1.5), frame="none", cex=0.5)
+dev.off()
+```
+
 **Extracting posterior probabilities from MrBayes output**
 
 ```r
