@@ -4,39 +4,48 @@
 ***
 
 **read in Newick tree**
+```r
 read.tree("file.tre")
-
+```
 **read in Nexus tree (or file)**
+```r
 read.nexus("file.nex")
-
+```
 **plot tree**
+```r
 plot.phylo(Object)
-
+```
 **ladderize**
+```r
 ladderize(Object)
-
+```
 **plot as pdf**
-
+```r
 pdf("Maj.pdf", width=4, height=7)
 
 plot(Maj, cex=0.7, show.node.label=TRUE, adj=0, label.offset=0.5)
 
 dev.off()
-
+```
 **(to get rid of edge lengths)**
+
+```r
 pdf("tree.pdf", width=4, height=7)
 
 plot(tree, cex=0.7, show.node.label=TRUE, use.edge.length=FALSE, adj=0, label.offset=0.5)
 nodelabels(nodes, frame="none", cex=0.7)
 
 dev.off()
-
+```
 **Plot a tree with node labels**
+```r
 pdf("nodetree.pdf", width=10, height=7)
 plot(tree, cex=0.7, show.node.label=TRUE, use.edge.length=FALSE, adj=0, label.offset=0.5)
 nodelabels(cex=0.5)
 tiplabels(cex=0.5)
 dev.off()
+```
+
 **Extracting posterior probabilities from MrBayes output**
 
 ```r
