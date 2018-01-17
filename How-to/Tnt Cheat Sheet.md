@@ -13,7 +13,8 @@ log Fish.log;
 help;
 
 **read in constraint**
-* I find this easiest to do by combing the constraint tree with your data in mesquite and exporting as a tnt file.  (N is the tree number, so probably 0)*separate paragraph*
+* I find this easiest to do by combing the constraint tree with your data in mesquite and exporting as a tnt file.  (N is the tree number, so probably 0)
+
 force =&N;
 
 **Enforce constraint**
@@ -30,10 +31,12 @@ taxname= ;
 
 **increase memory allocation**
 * (default is 16mb I believe).  This must be done before reading in the data.
+
 mxram 2000;
 
 **Change tree buffer.**
-* This must be done after reading in the data. *separate paragraph*
+* This must be done after reading in the data.
+
 hold 10000;
 
 **Exhaustive search (implicit enumeration)**
@@ -54,7 +57,9 @@ majority ;
 **map characters**
 map ;
 
-**Saving trees(tnt does this weirdly, you have to open, export, and close a tree file. Below will export both a tree file and a nexus file with matrix + trees**
+**Saving trees**
+* tnt does this weirdly, you have to open, export, and close a tree file. Below will export both a tree file and a nexus file with matrix + trees
+
 tsave *trees.tre
 export *trees.nex
 tsave/;
