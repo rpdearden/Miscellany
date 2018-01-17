@@ -75,13 +75,14 @@ nodes<- lapply(node_comment, get.pp)
 
 #Function to make decimal post. probs into percentages
 MultRound <- function(nodes){
-				(signif(nodes, digits=2))*100
+			(signif(nodes, digits=2))*100
 				}
 
 #Run aforementioned function
 nodes2<- lapply(nodes, MultRound) 
 
-#Plot output as pdf - node labels specified have to be exactly all internal nodes, or the node values will shift
+#Plot output as pdf - node labels specified have to be exactly all internal nodes, or the node values will shift - check this whenever using a different tree.
+#I'm sure there is a more elegant way of fixing this so only internal nodes are considered- alas, I'm bollocksed if I know what it is. 
 pdf("tree.pdf", width=5, height=7)
 plot(tree, cex=0.7, show.node.label=TRUE, use.edge.length=FALSE, adj=0, label.offset=0.5)
 nodelabels(nodes2[41:72], adj=c(1,1.5), frame="none", cex=0.5)

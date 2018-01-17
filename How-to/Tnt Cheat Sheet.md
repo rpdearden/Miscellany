@@ -10,11 +10,11 @@ cdir DIRECTORY;
 log Fish.log;
 
 **list commands**
-help ;
+help;
 
 **read in constraint**
-* I find this easiest to do by combing the constraint tree with your data in mesquite and exporting as a tnt file.
-force =&N; (where N is the tree number, so probably 0)
+* I find this easiest to do by combing the constraint tree with your data in mesquite and exporting as a tnt file.  (N is the tree number, so probably 0)*separate paragraph*
+force =&N;
 
 **Enforce constraint**
 constrain =;
@@ -29,10 +29,12 @@ outgroup OUTGROUP
 taxname= ;
 
 **increase memory allocation**
+* (default is 16mb I believe).  This must be done before reading in the data.
+mxram 2000;
 
-
-**Change tree buffer**
-hold 10000
+**Change tree buffer.**
+* This must be done after reading in the data. *separate paragraph*
+hold 10000;
 
 **Exhaustive search (implicit enumeration)**
 ienum ;
@@ -58,14 +60,17 @@ export *trees.nex
 tsave/;
 
 **Print majority svg**
+* NOTE: if you don't clear ttags at the end (ttags -;) it will stack all recorded ttags and confuse you
 ttags= ;
 majority ;
 ttag &Majority.svg ;
+ttags -;
 
 **Print strict svg**
 ttags= ;
 qnelsen ;
 ttag &Strict.svg;
+ttags -;
 
 **Bootstrapping (with svg print)**
 ttags= ;
