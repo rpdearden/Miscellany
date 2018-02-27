@@ -83,7 +83,10 @@ Much of this is based on [this](https://cgi.tutsplus.com/articles/sculpt-model-a
 * Don't underlight it
 * Reduce the specular light to get more of an ammonium chloride feel to virtual casts
 
-
+**Manipulating parts of a mesh**
+* If you go into edit mode you can select parts of a mesh by using b, c, and a to do different things.  RMB deselects method but keeps selection
+* These can then be separated by pressing the p key when you've selected the bit you want to remove
+* Combine meshes into a single mess by pressing Ctrl+J
 
 
 

@@ -48,8 +48,10 @@ dev.off()
 
 **Making strict consensus trees**
 * I particularly use this for tnt output, in which the outputted trees are an absolute pain in the arse to deal with - to do this I first import the trees from the tnt output nexus into mesquite and export them as a nexus file.
+* This will output a pdf of the tree, as well as a nexus file containing the tree in Newick format
 ```r
 strictcon <- consensus(trees, p=1)
+write.nexus(strictcon, file="Strict.nex", translate=FALSE)
 pdf("Strict.pdf", width=7, height=20)
 plot(strictcon, cex=0.7, show.node.label=TRUE, use.edge.length=FALSE, adj=0, label.offset=0.5)
 dev.off()
@@ -85,10 +87,10 @@ library(ape)
 library(phylotate)
 
 #Set directory
-setwd("~/Documents/PhD/Ptomacanthus/Ptoma_phylo/Final_Final_Coates/Bayesian")
+setwd("DragDirHERE")
 
 #Read in Mr bayes consensus tree, using phylotate to annotate with values
-tree <- phylotate::read_annotated("~/Documents/PhD/Ptomacanthus/Ptoma_phylo/Final_Final_Coates/Bayesian/PtomMatrix_FINAL_FINAL.nex.con.tre")
+tree <- phylotate::read_annotated("DragTreFileHERE")
 
 #ladderize tree
 tree <- ladderize(tree)
@@ -112,10 +114,13 @@ MultRound <- function(nodes){
 nodes2<- lapply(nodes, MultRound) 
 
 #Plot output as pdf - node labels specified have to be exactly all internal nodes, or the node values will shift - check this whenever using a different tree.
+#To work out which range this is:
+tree
+#And then in the node labels [ntips+1, ntips+nnodes]
 #I'm sure there is a more elegant way of fixing this so only internal nodes are considered- alas, I'm bollocksed if I know what it is. 
-pdf("tree.pdf", width=5, height=7)
-plot(tree, cex=0.7, show.node.label=TRUE, use.edge.length=FALSE, adj=0, label.offset=0.5)
-nodelabels(nodes2[41:72], adj=c(1,1.5), frame="none", cex=0.5)
+pdf("tree.pdf", width=5, height=10)
+plot(tree, cex=0.5, show.node.label=TRUE, use.edge.length=FALSE, adj=0, label.offset=0.5)
+nodelabels(nodes2[89:152], adj=c(1,1.5), frame="none", cex=0.5)
 dev.off()
 
 ```
