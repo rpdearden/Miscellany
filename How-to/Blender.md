@@ -84,10 +84,23 @@ Much of this is based on [this](https://cgi.tutsplus.com/articles/sculpt-model-a
 * Reduce the specular light to get more of an ammonium chloride feel to virtual casts
 
 **Manipulating parts of a mesh**
-* If you go into edit mode you can select parts of a mesh by using b, c, and a to do different things.  RMB deselects method but keeps selection
+* If you go into edit mode you can select parts of a mesh by using b, c, and a to do different things.  
+* RMB deselects method but keeps selection
+* c selects using a paintbrush - scroll to change size
+* b selects by using a bounding box
+* press z to change to wireframe mode - this will allow you to select through the object, not just the face you can see
+* ctrl + + and ctrl + - add and subtract bits respectively - useful for getting rid of isolated bits or growing to take in bits you missed 
 * These can then be separated by pressing the p key when you've selected the bit you want to remove
 * Combine meshes into a single mess by pressing Ctrl+J
 
+**Bisecting an object**
+This operation will bisect a blender object  - or will it? Haven't tried with a complicated object
+* Select object
+* Edit mode
+* Tools - bisect on left toolbar
+* Drag plane
+* Press F6 to select things - change plane point and angle
+* Object will be bisected!
 
 
 

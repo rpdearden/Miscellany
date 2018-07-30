@@ -20,7 +20,7 @@ Objects can be imported and manipulated in Inkscape - I use this to make posters
 
 
 * *Shapes* A number of shapes are createable in Inkscape - polygons, circles, and squares
-* *Text* You can create regions of text
+* *Text* You can create regions of text - to insert symbols activate Unicode mode by pressing ctrl+u, then type the unicode for the desired symbol and press space - exit unicode mode with ctrl+u again
 ![Objects](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Ink_Objects.png "Object options")
 
 * *Colouring objects* The colour of both the stroke (line) and fill (inside) of objects can be manipulated, either by choosing a colour, by hexcode, or by using the pipette. Can also do gradients

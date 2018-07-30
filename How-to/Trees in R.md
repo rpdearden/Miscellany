@@ -125,4 +125,55 @@ dev.off()
 
 ```
 
+**Plotting Consensus networks**
 
+```r
+
+#Load packages
+library(ape)
+library(phangorn)
+
+#set directory
+setwd("~/Documents/PhD/Diplacanthus/Consensus networks")
+
+#read in trees
+Tree1 <- read.nexus("~/Documents/PhD/Diplacanthus/Consensus networks/BrazDeWint2016.tre")
+Tree2 <- read.nexus("~/Documents/PhD/Diplacanthus/Consensus networks/Burrow2016.tre")
+Tree3 <- read.nexus("~/Documents/PhD/Diplacanthus/Consensus networks/Coates2018.tre")
+Tree4 <- read.nexus("~/Documents/PhD/Diplacanthus/Consensus networks/King2016.tre")
+Tree5 <- read.nexus("~/Documents/PhD/Diplacanthus/Consensus networks/Lu2016.tre")
+Tree6 <- read.nexus("~/Documents/PhD/Diplacanthus/Consensus networks/Qiao2016.tre")
+Tree7 <- read.nexus("~/Documents/PhD/Diplacanthus/Consensus networks/Zhu2016.tre")
+
+#Prune trees for same number of tips - (should definitely loop this)
+prunes<-c("Euthacanthus", "Ramirosuarezia", "Latviacanthus")
+PT1 <- drop.tip(Tree1, prunes)
+PT2 <- drop.tip(Tree2, prunes)
+PT3 <- drop.tip(Tree3, prunes)
+PT4 <- drop.tip(Tree4, prunes)
+PT5 <- drop.tip(Tree5, prunes)
+PT6 <- drop.tip(Tree6, prunes)
+PT7 <- drop.tip(Tree7, prunes)
+
+#Combine Trees into the same object
+Trees <- c(PT1, PT2, PT3, PT4, PT5, PT6, PT7)
+
+#Create consensus network and plot at 0.5
+cnet05 <- consensusNet(Trees, prob = 0.5)
+pdf("CNet_0.5.pdf", width=10, height=10)
+plot(cnet05, type="2D", cex=0.8)
+dev.off() 
+
+#Create consensus network and plot at 0.3
+cnet03 <- consensusNet(Trees, prob = 0.3)
+pdf("CNet_0.3.pdf", width=10, height=10)
+plot(cnet03, type="2D", cex=0.8)
+dev.off() 
+
+#Create consensus network and plot at 0.1
+cnet01 <- consensusNet(Trees, prob = 0.1)
+pdf("CNet_0.1.pdf", width=10, height=10)
+plot(cnet01, type="2D", cex=0.8)
+dev.off() 
+
+```
