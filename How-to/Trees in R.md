@@ -177,3 +177,25 @@ plot(cnet01, type="2D", cex=0.8)
 dev.off() 
 
 ```
+
+**Using strap to plot phylo against time**
+
+```r
+#Load packages
+library(strap)
+
+#set directory
+setwd("~/Documents/PhD/Big_Chondrichthyan_Phylogeny/TNT1")
+
+#Read in tree
+tree <- read.nexus("Strict.nex")
+
+#Read in dates - these should be in a 3 column CSV with Taxon, Fad, and Lad
+Dates<-read.csv("~/Documents/PhD/Big_Chondrichthyan_Phylogeny/TNT1/Dates.csv", header=TRUE, row.names=1)
+
+#Create time calibrated tree
+tree_1 <-DatePhylo(tree, Dates, method="equal", rlen=1)
+
+# Plot tree with dates
+geoscalePhylo(tree=tree_1, ages=Dates, boxes="Age", cex.tip=0.4)
+```
