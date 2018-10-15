@@ -80,7 +80,7 @@ dev.off()
 
 **Making Adams consensus trees**
 * I've been too lazy to write something for this in R, so instead I import the tree from PAUP
-* This will output a pdf of the tree, as well as a nexus file containing the tree in Newick format
+* This will output a pdf of the tree
 ```r
 Adams <- read.nexus("Adams.nex")
 pdf("Adams.pdf", width=7, height=20)
