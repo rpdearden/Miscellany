@@ -102,6 +102,9 @@ This operation will bisect a blender object  - or will it? Haven't tried with a 
 * Press F6 to select things - change plane point and angle
 * Object will be bisected!
 
+**Low-poly models**
+This link has an interesting workflow: [here](https://blog.sketchfab.com/tutorial-low-poly-assets-from-3d-scans/?utm_source=social&utm_medium=twitter&utm_campaign=blog-post&utm_content=Tutorial:%20Low%20Poly%20Assets%20from%203D%20Scans)
+
 
 
 

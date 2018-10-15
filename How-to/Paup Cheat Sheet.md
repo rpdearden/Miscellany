@@ -100,3 +100,10 @@ savetrees from=1 to=1 savebootp=nodelabels file=filename.tre;
 ```
 	filter maxscore=MPT+4;
 ```
+
+**Workflow for filtering trees by a backbone filter tree**
+```
+Loadconstr File=Filename Asbackbone=yes;
+Showconstr
+filter constraint=filter;
+```

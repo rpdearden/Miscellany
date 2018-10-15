@@ -78,6 +78,16 @@ nodelabels(nodeperc, adj=c(1,1.5), frame="none", cex=0.5)
 dev.off()
 ```
 
+**Making Adams consensus trees**
+* I've been too lazy to write something for this in R, so instead I import the tree from PAUP
+* This will output a pdf of the tree, as well as a nexus file containing the tree in Newick format
+```r
+Adams <- read.nexus("Adams.nex")
+pdf("Adams.pdf", width=7, height=20)
+plot(Adams, cex=0.7, show.node.label=TRUE, use.edge.length=FALSE, adj=0, label.offset=0.5)
+dev.off()
+```
+
 **Extracting posterior probabilities from MrBayes output**
 
 ```r
@@ -198,4 +208,15 @@ tree_1 <-DatePhylo(tree, Dates, method="equal", rlen=1)
 
 # Plot tree with dates
 geoscalePhylo(tree=tree_1, ages=Dates, boxes="Age", cex.tip=0.4)
+
+#Example
+
+tree <- read.nexus("Strict.nex")
+Dates <- read.csv("CoatesDates2.csv",header=TRUE, row.names=1)
+tree_1 <-DatePhylo(tree, Dates, method="equal", rlen=1)
+pdf("Geoscale.pdf", width=10, height=7)
+geoscalePhylo(tree=tree_1, ages=Dates, boxes="Age", cex.tip=0.4, direction="rightwards", x.lim=(35), cex.ts=0.5)
+dev.off()
+
+
 ```
