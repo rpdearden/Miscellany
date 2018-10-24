@@ -9,12 +9,10 @@ This is currently really a reminder to myself about how it works - I may expand 
 * Navigate to correct directory in Terminal
 * To serve (when testing locally) - this will update as you make changes
 ```
-
 bundle exec jekyll serve
 ```
 * To build - this is a one-off build
 ```
-
 bundle exec jekyll build
 ```
 
