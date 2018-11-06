@@ -3,7 +3,8 @@ title: "RMarkdownTest"
 author: "RPDearden"
 date: "06/11/2018"
 output:
-  html_document: default
+  output: rmarkdown::github_document
+    
 ---
 This is a paragraph in an R Markdown document.
 
