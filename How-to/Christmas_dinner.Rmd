@@ -1,0 +1,76 @@
+---
+title: "Christmas Dinner"
+author: "RPDearden"
+date: "08/11/2018"
+output: html_document
+runtime: shiny
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+The first aim of this document is for me to learn how to use Shiny.  The second is to allow me to calculate my Christmas Dinner quantities and timetable.  It is a work in progress.
+
+Turkey deets are taken from [here](https://www.theguardian.com/lifeandstyle/wordofmouth/2010/dec/20/how-to-cook-perfect-christmas-dinner)
+
+## Dinner Details
+
+```{r dinner_inputs, echo=FALSE}
+inputPanel(
+  numericInput("TurkeyWeight", label = "Weight of turkey (g)", 
+               value = 450, min = NA, max = NA, step = NA),
+  numericInput("BumsOnSeats", label = "Number of people",
+               value =6, min = 1, max = NA, step = 1)
+)
+```
+
+## Turkey
+Taken from [here](https://www.theguardian.com/lifeandstyle/wordofmouth/2010/dec/20/how-to-cook-perfect-christmas-dinner), which has the recipe
+
+To make your turkey you will require: *note why markdown bullet points not working below?*
+
+-1 turkey, of weight above, with giblets
+
+-170g butter
+
+-half an onion
+
+-bay leaf
+
+-piece of cook's muslin
+
+For gravy:
+
+-1 tbsp plain flour
+
+-4tbsp madeira
+
+-568ml hot poultry stock or water
+
+
+```{r turkey_outputs, echo=FALSE}
+
+renderText({
+  TurkeyTime <- ((((input$TurkeyWeight)/450)*20)+20)
+  paste("You will need to cook your turkey for", TurkeyTime, "minutes")
+  
+})
+```
+
+##Potatoes
+Rather than being boiled, mashed, or stuck in a stew these are roasted from [here](https://www.theguardian.com/lifeandstyle/wordofmouth/2010/dec/20/how-to-cook-perfect-christmas-dinner)
+
+*n.b. need to sort out dem decimals*
+
+```{r potato_outputs, echo=FALSE}
+
+renderText({
+  paste("-",(((input$BumsOnSeats)/6)*1.2), "kg potatoes")
+})
+renderText({
+  paste("- A jar of goose fat OR",(((input$BumsOnSeats)/6)*4),"tbsp olive oil")
+})
+```
+
