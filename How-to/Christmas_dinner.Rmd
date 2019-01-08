@@ -5,10 +5,12 @@ date: "08/11/2018"
 output: html_document
 runtime: shiny
 ---
-
-
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, warnings=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(shiny)
+library(shinyTime)
+library(tidyverse)
+library(lubridate)
 ```
 
 The first aim of this document is for me to learn how to use Shiny.  The second is to allow me to calculate my Christmas Dinner quantities and timetable.  It is a work in progress.
@@ -17,45 +19,48 @@ Turkey deets are taken from [here](https://www.theguardian.com/lifeandstyle/word
 
 ## Dinner Details
 
-```{r dinner_inputs, echo=FALSE}
+```{r dinner_inputs, echo=FALSE, warnings=FALSE}
 inputPanel(
   numericInput("TurkeyWeight", label = "Weight of turkey (g)", 
                value = 450, min = NA, max = NA, step = NA),
   numericInput("BumsOnSeats", label = "Number of people",
-               value =6, min = 1, max = NA, step = 1)
+               value =6, min = 1, max = NA, step = 1),
+  sliderInput("DinsTime", label="Dinner time",
+              min=0, max=24, value=14, post=":00")
 )
 ```
+
 
 ## Turkey
 Taken from [here](https://www.theguardian.com/lifeandstyle/wordofmouth/2010/dec/20/how-to-cook-perfect-christmas-dinner), which has the recipe
 
-To make your turkey you will require: *note why markdown bullet points not working below?*
+To make your turkey you will require:
 
--1 turkey, of weight above, with giblets
+* 1 turkey, of weight above, with giblets
 
--170g butter
+* 170g butter
 
--half an onion
+* half an onion
 
--bay leaf
+* bay leaf
 
--piece of cook's muslin
+* piece of cook's muslin
 
 For gravy:
 
--1 tbsp plain flour
+* 1 tbsp plain flour
 
--4tbsp madeira
+* 4tbsp madeira
 
--568ml hot poultry stock or water
+* 568ml hot poultry stock or water
 
 
 ```{r turkey_outputs, echo=FALSE}
 
 renderText({
   TurkeyTime <- ((((input$TurkeyWeight)/450)*20)+20)
+  HMSTurkTime <- seconds_to_period(TurkeyTime*60)
   paste("You will need to cook your turkey for", TurkeyTime, "minutes")
-  
 })
 ```
 
@@ -74,3 +79,67 @@ renderText({
 })
 ```
 
+
+##Timetable
+```{r timetable_outputs, echo=FALSE}
+
+renderTable({
+  hrs <- function(u) {
+  x <- u * 3600
+  return(x)
+  }
+  mns <- function(m) {
+   x <- m * 60
+   return(x)
+  }
+  
+  TurkeyTime <- ((((input$TurkeyWeight)/450)*20)+20)
+  HMSTurkTime <- seconds_to_period(TurkeyTime*60)
+  Dinnertime1 <- strptime(input$DinsTime, format="%H")
+  Dinnertime2 <- paste(hour(Dinnertime1),":00", sep="")
+  TurkeyStand1 <- Dinnertime1 - mns(30)
+  TurkeyStand2 <-paste(hour(TurkeyStand1),minute(TurkeyStand1), sep=":")
+  CookTurkey1 <- TurkeyStand1 - HMSTurkTime
+  CookTurkey2 <-paste(hour(CookTurkey1),minute(CookTurkey1), sep=":")
+  PrepTurkey1 <- CookTurkey1 - hrs(1)
+  PrepTurkey2 <-paste(hour(PrepTurkey1),minute(PrepTurkey1), sep=":")
+  
+things <- tribble(
+ ~Task,            ~Start,  ~End,    ~Category,
+ "Prepare Turkey", PrepTurkey2, CookTurkey2, "Prep",
+ "Cook Turkey",    CookTurkey2, TurkeyStand2, "Cooking",
+ "Turkey Stands",  TurkeyStand2, Dinnertime2, "Misc"
+)
+
+  })
+
+#GANTT chart plots below
+renderPlot({
+  hrs <- function(u) {
+  x <- u * 3600
+  return(x)
+  }
+  mns <- function(m) {
+   x <- m * 60
+   return(x)
+  }
+   TurkeyTime <- ((((input$TurkeyWeight)/450)*20)+20)
+  HMSTurkTime <- seconds_to_period(TurkeyTime*60)
+  Dinnertime1 <- strptime(input$DinsTime, format="%H")
+  Dinnertime2 <- paste(hour(Dinnertime1),":00", sep="")
+  TurkeyStand1 <- Dinnertime1 - mns(30)
+  TurkeyStand2 <-paste(hour(TurkeyStand1),minute(TurkeyStand1), sep=":")
+  CookTurkey1 <- TurkeyStand1 - HMSTurkTime
+  CookTurkey2 <-paste(hour(CookTurkey1),minute(CookTurkey1), sep=":")
+  PrepTurkey1 <- CookTurkey1 - hrs(1)
+  PrepTurkey2 <-paste(hour(PrepTurkey1),minute(PrepTurkey1), sep=":")
+   
+  
+  plot(1)
+
+  
+  
+})
+
+```
+GANNT chart cobbled together with considerable inspiration from [here](https://insileco.github.io/2017/09/20/gantt-charts-in-r/)

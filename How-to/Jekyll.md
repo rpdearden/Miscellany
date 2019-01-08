@@ -18,4 +18,14 @@ bundle exec jekyll build
 
 * Then sync any changes with Github
 
+**Embedded pdfs**
 
+* Worked this out using method shown [here](http://vinhqdang.github.io/tutorial/2016/10/26/publishing-pdf-with-jekyll)
+* CV is stored in googledrive folder "Jekyll pdfs".  To update, just re-load pdf and build site again
+
+**Preparing images**
+
+* All the following are done in GIMP
+* Flatten image: Image > Flatten
+* Scale down
+* Export as jpeg
