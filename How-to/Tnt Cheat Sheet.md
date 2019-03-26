@@ -105,7 +105,13 @@ resample jak replic 1000 ;
 ttag &FILENAME.svg ;
 ```
 **Bremer support**
-Not quite got working, but can use Bremer.run [script](http://phylo.wdfiles.com/local--files/tntwiki/Bremer.run)
+Currently got this working using the Bremer.run [script](http://phylo.wdfiles.com/local--files/tntwiki/Bremer.run). 
+Put the script into your working directory, run your main analysis (so you have your trees in memory)and then the following will export an .svg:
+```
+ttags= ;
+proc Bremer.run;
+ttag &FILENAME.svg ;
+```
 
 **Consistency + Retention indices**
 Not quite got working, but can use stats.run [script](http://phylo.wdfiles.com/local--files/tntwiki/Stats.run)
