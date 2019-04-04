@@ -82,7 +82,8 @@ dev.off()
 * I've been too lazy to write something for this in R, so instead I import the tree from PAUP
 * This will output a pdf of the tree
 ```r
-Adams <- read.nexus("Adams.nex")
+Adams <- read.nexus("Adams.tre")
+Adams <- ladderize(Adams)
 pdf("Adams.pdf", width=7, height=20)
 plot(Adams, cex=0.7, show.node.label=TRUE, use.edge.length=FALSE, adj=0, label.offset=0.5)
 dev.off()
@@ -123,14 +124,11 @@ MultRound <- function(nodes){
 #Run aforementioned function
 nodes2<- lapply(nodes, MultRound) 
 
-#Plot output as pdf - node labels specified have to be exactly all internal nodes, or the node values will shift - check this whenever using a different tree.
-#To work out which range this is:
-tree
-#And then in the node labels [ntips+1, ntips+nnodes]
-#I'm sure there is a more elegant way of fixing this so only internal nodes are considered- alas, I'm bollocksed if I know what it is. 
+#Plot output as pdf - this calculates the nodes to print on using [ntips+1, ntips+nnodes]
+#You may have to delete some uninformative node labels towards the base of the tree
 pdf("tree.pdf", width=5, height=10)
 plot(tree, cex=0.5, show.node.label=TRUE, use.edge.length=FALSE, adj=0, label.offset=0.5)
-nodelabels(nodes2[89:152], adj=c(1,1.5), frame="none", cex=0.5)
+nodelabels(nodes2[(Ntip(tree)+1):(Ntip(tree)+Nnode(tree))], adj=c(1.1,1.5), frame="none", cex=0.5)
 dev.off()
 
 ```
