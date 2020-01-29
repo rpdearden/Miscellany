@@ -14,6 +14,7 @@ library(plotrix)
 
 
 ui <- fluidPage(
+
   
   titlePanel("Christmas Dinner Plan"),
   
@@ -26,15 +27,22 @@ ui <- fluidPage(
     
     ),
   
+
+  
   mainPanel(
     ###-----------------------------GANNT CHART---------------------------------###
     h2("Timetable"),
     plotOutput("DinnerPlot"),
     hr(),
+    
+    ###-----------------------------TIME TABLE---------------------------------###
+    h2("Exact timings"),
+    tableOutput("TimeTable"),
+    hr(),  
     ###-----------------------------TURKEY---------------------------------###
     h2("Ingredients"),
     p("Recipe taken from",
-    a("here", href="https://www.theguardian.com/lifeandstyle/wordofmouth/2010/dec/20/how-to-cook-perfect-christmas-dinner"),
+    a("here",href="https://www.theguardian.com/lifeandstyle/wordofmouth/2010/dec/20/how-to-cook-perfect-christmas-dinner"),
     ", on the Guardian website."),
     h3("Turkey"),
     strong("For the turkey:"),
@@ -91,16 +99,13 @@ ui <- fluidPage(
     strong("Ingredients:"),
     p(textOutput("Sproutsweight")),
     p(textOutput("Almonds")),  
-    hr(),
+    hr()
     
-    ###-----------------------------TIME TABLE---------------------------------###
-    h2("Exact timings"),
-    tableOutput("TimeTable")
 
     
      )
 
-  
+
 )
 
 
@@ -154,6 +159,7 @@ server <- function(input, output, session) {
     "Prepare Vegetables",PotatoPrepStartP(),PotatoBoilStartP(),  "Prep", 
     "Parboil Vegetables",PotatoBoilStartP(),PotatoCookStartP(),  "Prep",
     "Cook Vegetables",   PotatoCookStartP(),DinnerTimeP(),       "Cooking",
+    "Pigs in Blankets", TurkeyStandStartP(),  DinnerTimeP(),       "Cooking",
     "Do Sprouts",       SproutsP(),         DinnerTimeP(),       "Cooking",
     "Do Bread Sauce",   SproutsP(),         DinnerTimeP(),       "Cooking",
     "Do Gravy",   SproutsP(),         DinnerTimeP(),       "Cooking"
@@ -163,9 +169,9 @@ server <- function(input, output, session) {
   
   
 
-  gantt.info<-reactive(list(labels=c("Heat Oven","Prepare Turkey","CookTurkey","Turkey Stands", "Cook Stuffing","Prep Vegetables","Parboil Vegetables", "Cook Vegetables","Do Sprouts","Do Bread Sauce","Do Gravy"),
-                       starts=c(TurkeyPrepStartG(),TurkeyPrepStartG(),TurkeyCookStartG(),TurkeyStandStartG(),TurkeyStandStartG(),PotatoPrepStartG(),PotatoBoilStartG(),PotatoCookStartG(),SproutsG(),SproutsG(),SproutsG()),
-                       ends=c(TurkeyCookStartG(),TurkeyCookStartG(),TurkeyStandStartG(),DinnertimeG(),DinnertimeG(),PotatoBoilStartG(),PotatoCookStartG(),DinnertimeG(),DinnertimeG(),DinnertimeG(),DinnertimeG()),
+  gantt.info<-reactive(list(labels=c("Heat Oven","Prepare Turkey","CookTurkey","Turkey Stands", "Cook Stuffing","Prep Vegetables","Parboil Vegetables", "Cook Vegetables", "Pigs in blankets","Do Sprouts","Do Bread Sauce","Do Gravy"),
+                       starts=c(TurkeyPrepStartG(),TurkeyPrepStartG(),TurkeyCookStartG(),TurkeyStandStartG(),TurkeyStandStartG(),PotatoPrepStartG(),PotatoBoilStartG(),PotatoCookStartG(),TurkeyStandStartG(),SproutsG(),SproutsG(),SproutsG()),
+                       ends=c(TurkeyCookStartG(),TurkeyCookStartG(),TurkeyStandStartG(),DinnertimeG(),DinnertimeG(),PotatoBoilStartG(),PotatoCookStartG(),DinnertimeG(),DinnertimeG(),DinnertimeG(),DinnertimeG(),DinnertimeG()),
                        Category=c("Prep","Prep","Cooking","Prep","Cooking","Prep","Prep","Cooking","Cooking","Cooking","Cooking")
                        ))
   
@@ -177,6 +183,7 @@ server <- function(input, output, session) {
                 "#E297AF",#PotatoPrep
                 "#973253",#PotatoBoil
                 "#4B0018",#PotatoCook
+                "#244C00",#Pigsinblankets
                 "#629833",#Sprouts
                 "#BCE498",#Bread Sauce
                 "#244C00"#Gravy
