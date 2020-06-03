@@ -1,0 +1,17 @@
+---
+title: "Four bar linkage tutorial"
+author: "RPDearden"
+date: "29/05/2020"
+output: html_document
+runtime: shiny
+---
+```{r setup, include=FALSE, warnings=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(linkR)
+library(GeoMorph)
+```
+The aim of this is to learn how to set up 4 bar linkages using LinkR. I will be using the Dunkleosteus from Anderson and Westneat (2007) as my test subject
+
+###2D 3-bar linkage###
+
+#Extract the landmark coordinates from the image

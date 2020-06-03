@@ -91,6 +91,7 @@ Much of this is based on [this](https://cgi.tutsplus.com/articles/sculpt-model-a
 * Alt lmb is select whole edge
 * E will extrude, create new nodes below selected
 * Press F to change brush size
+* If have problems with weird smoothing, can fix with Object Data Properties > Normals > Auto Smooth, Angle dictates cut off - 60 degrees suggested
 
 **General useful things**
 
@@ -126,6 +127,8 @@ Much of this is based on [this](https://cgi.tutsplus.com/articles/sculpt-model-a
 * These can then be separated by pressing the p key when you've selected the bit you want to remove
 * Combine meshes into a single mess by pressing Ctrl+J
 * Press s to change size of object (ctrl will do increments, shift will do slight)
+* If tap axis twice after transform operation, it'll do it in the local axis
+
 
 **Bisecting an object**
 This operation will bisect a blender object  - or will it? Haven't tried with a complicated object
@@ -144,3 +147,35 @@ This link has an interesting workflow: [here](https://blog.sketchfab.com/tutoria
 * **Bump Maps** can make normal maps or black and white. For former use GIMP to turn image greyscale. Then adjust levels to give big contrast of light and dark and export as jpg. Dark bits will be low, light bits high.
 * **Reflection (specularity) map** is used to make reflective parts. For this keep on using GIMP to tweak levels to make areas with reflections light and those with none dark.
 * **Displacement maps** add in large-scale displacement. Add as a Displacement modifier. Needs lots of polygons, so subdivide surface/ right click and subdivide first
+
+
+**Material Properties**
+* **Fresnel** the idea that at the edges of an object it is more reflective, e.g. in lake reflections more mirrory in distance
+* **Roughness** The more rough, the more light is reflected - this impacts fresnel
+* **Metals vs dialectrics** Dielectric materials are most materials - some light bounces off and other light is refracted, and they have no coloured reflection. Metals reflect light but absorb all refracted light, so have no diffuseness, and also have a coloured reflection. Metallic slider in principled shader should be at 0 or 1 and changes between the two.
+* **Subsurface scattering** Light reflected from within material - a property of organic materials
+* **Anisotropy** Gives a stretched reflection like in the back of a frying pan - can change strength and direction. Can add a tangent for direction.
+* **Sheen** Sheen is used for fabric. It is not to do with specular reflection - gives a subtle cross-reflection, like velvet. Sheen tint changes from white to base colour.
+* **Clearcoat** this is rarely used and adds a sort of lacquer
+* **Specular** Changes reflection brightness - most dielectric materials have this at 0.5. To eliminate reflection use roughness.
+* **Specular tint** This gives the reflection colour. Not usually needed as dielectric materials have no colour and metallic ones are changed by the metallic shader.
+* **Transmission** Allows light through object, and makes glassy. Same as glass shader with the same IOR.
+* **IOR** Index of refraction. This only works if transmission is on
+
+**Useful Hotkeys**
+* **shift + S** Move position of cursor
+* **Ctrl +Alt + Q** Switch into 4 directions mode
+* **.** Change point around which translation works
+* **Ctrl + B Bevel**
+* **gg** to scooch vertices along edges - hold **Alt** to disable clamping and shoot off mesh
+* Post gg **e** to match to adjacent vertices, **f** to swap side 
+* **Alt + S** shrink along normal
+* **Shift + E** Create a crease
+* **Shift + Ctrl + Alt + S** Shear (rotate along axes)
+* **/** Local view for an object
+* **Ctrl + E** Then pick mark seam to mark seam
+* **u** uv unwrap in edit mode with all object selectedsz
+
+**Add-ons**
+* **Uv squares** To grid by shape in stoolbar fixes uv maps as squares
+* **Nodewrangler** Ctrl + shift + left click to test parts of a material
