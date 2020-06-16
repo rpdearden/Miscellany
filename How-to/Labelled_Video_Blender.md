@@ -40,6 +40,6 @@ Think carefully about where labels are and rotation to avoid crossovers.
 
 ![Objects](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Labels8.png "Labels8")
 
-9. Underwhelm your family and friends with your amazing new labelled video
+9. Underwhelm your family and friends with your amazing new labelled video (click image to link to video)
 
 [![Alternate Text](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Labels9.png)](https://drive.google.com/file/d/18Tdz8o-OAqKJvWRItVw-SrmIBbEqmK82/view?usp=sharing "Labelled Monkey vid")
