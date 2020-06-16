@@ -42,4 +42,4 @@ Think carefully about where labels are and rotation to avoid crossovers.
 
 9. Underwhelm your family and friends with your amazing new labelled video
 
-[![Alternate Text]({https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Labels9.png})]({https://drive.google.com/file/d/18Tdz8o-OAqKJvWRItVw-SrmIBbEqmK82/view?usp=sharing} "Labelled Monkey vid")
+![Alternate Text]({https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Labels9.png})]({https://drive.google.com/file/d/18Tdz8o-OAqKJvWRItVw-SrmIBbEqmK82/view?usp=sharing} "Labelled Monkey vid")
