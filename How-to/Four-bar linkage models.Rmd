@@ -8,10 +8,90 @@ runtime: shiny
 ```{r setup, include=FALSE, warnings=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(linkR)
-library(GeoMorph)
+library(geomorph)
 ```
 The aim of this is to learn how to set up 4 bar linkages using LinkR. I will be using the Dunkleosteus from Anderson and Westneat (2007) as my test subject
 
 ###2D 3-bar linkage###
+#Set working directory
+setwd("/Users/rpdearden/Documents/Sciencing/1_In_Progress/Acanthodes/4barLinkages/Dunkleosteus2D")
 
-#Extract the landmark coordinates from the image
+#digitize landmarks
+#Click to set either end of scale then 
+digitize2d("Dunkleosteus.jpg", nlandmarks=4, scale=0.2, tpsfile="Dunkleosteus.tps")
+digitize2d("Dunkleosteus_2.jpg", nlandmarks=37, scale=0.2, verbose="FALSE", tpsfile="DunkleosteusPoints.tps")
+
+
+
+#Read co-ordinates from .tps file and add z axis
+landmarks <- readland.tps(file="Dunkleosteus.tps", specID="ID")
+landmarks3D <-cbind(landmarks[,1,1],landmarks[,2,1],c(0,0,0,0))
+Points <-readland.tps(file="DunkleosteusPoints.tps", specID="ID")
+Points3D <-cbind(Points[,1,1],Points[,2,1],c(rep(0,37)))
+
+# Define the joint coordinates at each linkage junction using coordinates (starting bottom right -> clockwise)
+joint.coor <-rbind(c(landmarks3D[1,]),c(landmarks3D[2,]),c(landmarks3D[3,]),c(landmarks3D[4,]))
+
+
+## Define the joint types and constraints (all rotational in z axis)
+joint.types <-c('S','R','L','S')
+
+joint.cons <-list( NA,c(0,0,1), c(1,0,0), NA)
+
+
+# Define the connections among joints
+joint.conn <-rbind(c(3,0),c(0,1),c(1,2),c(2,3))
+
+#Link em up
+link.points <-Points3D
+
+# Set the link associations for each point
+link.assoc <- c(rep(0,10),rep(3,14),rep(2,13))
+
+# Define points to connect into paths
+path.connect <-list(c(1:10,1),c(11:19,11),c(15,20:24,15),c(25:37,25))
+
+
+#Create the linkage!
+linkage <-defineLinkage(joint.coor=joint.coor, joint.types=joint.types, joint.cons=joint.cons, joint.conn=joint.conn, link.points=link.points, link.assoc=link.assoc, path.connect=path.connect)
+
+#Draw linkage
+drawLinkage(linkage)
+#Make joint input parameters
+input.param <-list(-c(seq(0,pi/3,length=50)),c(seq(0,pi/3,length=50)))
+## Simulate with input rotations
+animate <-animateLinkage(linkage, input.param=input.param, input.joint=c(1,2))
+# Create animated visualization - follows right hand rule for direction
+drawLinkage(animate, file='Animate')
+# Create static visualization
+drawLinkage(animate, file='Static', animate=FALSE)
+
+
+#Try togetherAllpoints[40,]-Allpoints[39,], 
+Allpoints <-rbind(Points3D,landmarks3D)
+joint.coor <-rbind(c(Allpoints[38,]),c(Allpoints[39,]),c(Allpoints[40,]),c(Allpoints[41,]))
+joint.types <-c('R','R','S','S')
+joint.cons <-list( c(0,0,1), c(0,0,1), NA, NA)
+link.points <-Allpoints
+link.assoc <- c(rep(0,10),rep(3,14),rep(2,13),0,0,2,3)
+path.connect <-list(c(38,2:8,39,9,10,38),c(11:19,11),c(15,20:24),c(41,26:29,40,30:37,41))
+linkage <-defineLinkage(joint.coor=joint.coor, joint.types=joint.types, joint.cons=joint.cons, joint.conn=joint.conn,link.points=link.points, link.assoc=link.assoc,path.connect=path.connect)
+input.param <-list(-c(seq(0,pi/4,length=50)),c(seq(0,pi/4,length=50)))
+animate <-animateLinkage(linkage, input.param=input.param, input.joint=c(1,2), check.inter.joint.dist=TRUE)
+drawLinkage(animate, file='Animate')
+
+
+#Simple RRRR
+
+Allpoints <-rbind(Points3D,landmarks3D)
+joint.coor <-rbind(c(Allpoints[38,]),c(Allpoints[39,]),c(Allpoints[40,]),c(Allpoints[41,]))
+joint.types <-c('R','R','S','S')
+joint.cons <-list(c(0,0,1), c(0,0,1), NA, NA)
+joint.conn <-rbind(c(3,0),c(0,1),c(1,2),c(2,3))
+link.points <-Allpoints
+link.assoc <- c(rep(0,10),rep(3,14),rep(2,13),0,0,2,3)
+path.connect <-list(c(38,2:8,39,9,10,38),c(11:19,11),c(15,20:24),c(41,26:29,40,30:37,41))
+linkage <-defineLinkage(joint.coor=joint.coor, joint.types=joint.types, joint.cons=joint.cons, joint.conn=joint.conn,link.points=link.points, link.assoc=link.assoc,path.connect=path.connect)
+input.param <- -c(seq(0,pi/20,length=50))
+animate <-animateLinkage(linkage, input.param=input.param, input.joint=1, check.inter.joint.dist=TRUE)
+drawLinkage(animate, file='Animate')
