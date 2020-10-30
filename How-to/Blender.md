@@ -179,3 +179,8 @@ This link has an interesting workflow: [here](https://blog.sketchfab.com/tutoria
 **Add-ons**
 * **Uv squares** To grid by shape in stoolbar fixes uv maps as squares
 * **Nodewrangler** Ctrl + shift + left click to test parts of a material
+
+**Colours**
+* By default Blender uses sRGB, which is designed for old monitors and is Bad (see [here](https://www.youtube.com/watch?v=m9AT7H4GGrA)). This has a really low dynamic range and the lighting falloff is very abrupt.
+* Blenderguru suggests using the Filmic add-on instead. It is pre-installed in more recent editions of blender
+* Can mess with settings in Render -> colour management. I can't see all the options though. I will investigate!
