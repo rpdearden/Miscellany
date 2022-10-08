@@ -10,7 +10,7 @@ Blender is a free, open source software for 3D computer graphics ([website](http
 In this tutorial we will be using it to set up a very simple "virtual studio" to image 3D models of fossils.
 However Blender can do almost anything you'd want to do with 3D data - sculpting, modelling, rigging, animations, video editing, compositing...
 It is open source and community led, so new features are added every update, although these can vary depending on what the community is interested in.
-It is of a professional standard, e.g. the Netflix film Klaus was made in it.
+It is of a professional standard, there are loads of cool animated films made in it.
 Because it is free it is also very widely used by amateurs and there are loads of videos and guides on the internet.
 Blender gives you far more control over making images of 3D models than the built in 3D viewers in (for example) Mimics.
 This means you can produce images which are not only more beautiful, but which are also better at illustrating anatomy.
