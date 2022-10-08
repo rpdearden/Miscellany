@@ -2,7 +2,7 @@
 This is an introduction to using Blender for making images of 3D models which can be used for scientific figures.
 It is aimed at someone with no experience of Blender, and so will take a fairly direct path to doing the above, ignoring many Blender mysteries along the way.
 Hopefully by the end though you'll be able to go off and take images of any 3D models you desire, palaeontological or otherwise, and will have enough of a basic understanding to start looking into more complex things.
-This was originally written for a workshop based around taking images of *Protoichthyosaurus* at the University of Birmingham, using Blender 3.1 in 2022.
+This was originally written for a workshop based around taking images of *Protoichthyosaurus* at the University of Birmingham, using Blender 3.3 in 2022.
 
 ****
 **What is Blender and why use it?**
@@ -32,14 +32,14 @@ However, its speed/crashiness will scale with how good your computer (particular
 Because it is under constant development Blender is constantly being updated with new features, so it can be worth keeping an eye on new releases.
 ****
 
-![Download](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Blender_Image1_Download.png "Download")
+![Download](https://github.com/rpdearden/Miscellany/blob/master/Tutorials/Images/Blender_Image1_Download.png "Download")
 
 **Too many menus**
 As you load in Blender you'll see a beautiful splash screen: the art (made in Blender) is made by a member of the Blender community and changes with every version.
 Click off it and you'll get a default scene.
 If this is your first time it might be a bit overwhelming, but basically to start with you only need to worry about the layout tab and its 3 main sections: the 3D viewport, the outliner, and the properties menu.
 
-![Layout](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Blender_Image2_Layout.png "Layout")
+![Layout](https://github.com/rpdearden/Miscellany/blob/master/Tutorials/Images/Blender_Image2_Layout.png "Layout")
 
 The most immediately exciting of these is the 3D viewport: you can rotate the view with middle mouse, zoom in and out with the scroll wheel and pan with shift middle mouse.
 Important bits of these we will use are labelled below: the axis thingy (click it to orient the view), the camera view button, the viewport shading menu, and the cube, light, and camera that blender has given you.
@@ -50,7 +50,7 @@ Click the camera view button to see what your camera sees.
 Finally, change the view mode using the viewport shading menu.
 We'll set up the scene in Solid mode (default), but will use some others later (e.g. render preview uses the lighting/materials)
 
-![Buttons](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Blender_Image3_Buttons.png "Buttons")
+![Buttons](https://github.com/rpdearden/Miscellany/blob/master/Tutorials/Images/Blender_Image3_Buttons.png "Buttons")
 
 Less interesting but equally important is the outliner.
 This has a list of all the objects in your scene: you'll see currently there is the camera, light and the cube. 
@@ -58,7 +58,7 @@ If you select one in the 3D viewport, it will be selected in the outliner (and v
 You can click the eye and/or camera to make them visible either in the 3D viewport (eye) and/or camera (camera).
 You can see they're organised into groups called collections: we'll use these later.
 
-![Outliner](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Blender_Image4_Outliner.png "Outliner")
+![Outliner](https://github.com/rpdearden/Miscellany/blob/master/Tutorials/Images/Blender_Image4_Outliner.png "Outliner")
 
 
 Finally the properties menu, which acts as described really.
@@ -66,7 +66,7 @@ It contains tabs: some of these tabs control the scene as a whole (e.g. render p
 Others though are specific to certain objects: you'll see if you select the camera a camera tab will appear, and if you select the light a light tab.
 In this tutorial we won't use this that much, but almost anything you want to control is in this massive set of menus somewhere.
 
-![Properties](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Blender_Image5_Properties.png "Properties")
+![Properties](https://github.com/rpdearden/Miscellany/blob/master/Tutorials/Images/Blender_Image5_Properties.png "Properties")
 
 ****
 
@@ -78,7 +78,7 @@ Press shift a with your mouse in the 3D viewport and you'll find out.
 Navigate to Mesh > Monkey and click.
 You are now viewing Suzanne, the Blender mascot (note she got added where the cursor is, at the scene origin.)
 
-![Suzanne](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Blender_Image6_Suzanne.png "Suzanne")
+![Suzanne](https://github.com/rpdearden/Miscellany/blob/master/Tutorials/Images/Blender_Image6_Suzanne.png "Suzanne")
 
 Suzanne could do with some more flattering lighting so we will create a three-point lighting set up.
 This is a setup often used in photography and will comprise three lights: a key light, a fill light, and a back light.
@@ -90,7 +90,7 @@ Then use the hotkeys (s=scale, r=rotate, and g=grab) to position it as your key 
 Once you're happy duplicate this lamp with shift + d, and position these as your fill light and back light.
 Make these about half as powerful as the key light by going into their object properties.
 
-![Lights](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Blender_Image7_Lights.png "Lights")
+![Lights](https://github.com/rpdearden/Miscellany/blob/master/Tutorials/Images/Blender_Image7_Lights.png "Lights")
 
 
 Finally the camera angle isn't good for scientific figures, so we will put it straight on.
@@ -100,7 +100,7 @@ Then move it out on the y axis a bit with g (grab) then y (contrain to y axis)
 You can use the camera view to make sure you can see Suzanne through the lens.
 In this view press g, then z, then z again to scooch the camera towards and away from the subject
 
-![Camera](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Blender_Image8_Camera.png "Camera")
+![Camera](https://github.com/rpdearden/Miscellany/blob/master/Tutorials/Images/Blender_Image8_Camera.png "Camera")
 
 
 **Scene Organisation**
@@ -113,7 +113,7 @@ Select an object and place it in a collection by pressing shift + m, then rename
 Leave the camera in the Scene collection (rename it Camera).
 Then make a Lights collection with your lights in, and a Suzanne collection with Suzanne in.
 
-![Organisation](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Blender_Image9_Organisation.png "Organisation")
+![Organisation](https://github.com/rpdearden/Miscellany/blob/master/Tutorials/Images/Blender_Image9_Organisation.png "Organisation")
 
 ****
 
@@ -127,7 +127,7 @@ Anyway swap back to Eevee: rendering is as simple as pressing Render, Render ima
 You can use the Output properties tab to change aspects fo your render (e.g. resolution etc).
 And voila: you have a rendered image of Suzanne.
 
-![Render](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Blender_Image10_Render.png "Render")
+![Render](https://github.com/rpdearden/Miscellany/blob/master/Tutorials/Images/Blender_Image10_Render.png "Render")
 
 ****
 
@@ -144,7 +144,7 @@ Click on the base colour, change it and you'll notice Suzanne changes colour too
 You can also change other aspects of her material properties here: e.g. roughness (=reflectiveness) or make her metallic.
 If you change the colour and render you'll see any changes you make appear in your render.
 
-![Materials](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Blender_Image11_Materials.png "Materials")
+![Materials](https://github.com/rpdearden/Miscellany/blob/master/Tutorials/Images/Blender_Image11_Materials.png "Materials")
 
 While we're here we can also change the background colour for renders, which can also be manipulated with nodes.
 Click on object in the top left of the shader editor and change it to World.
@@ -164,9 +164,9 @@ You can examine this texture in the shading panel: notice the node setup is a bi
 If you wanted you could abandon the texture and make it purple or whatever by swapping the setup for a Principled BSDF.
 Then hit render, and you have created an image of the Lapworth ichthyosaur! Congratulations.
 
-![Ichthyosaur](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Blender_Image12_Ichthyosaur.png "Ichthyosaur")
+![Ichthyosaur](https://github.com/rpdearden/Miscellany/blob/master/Tutorials/Images/Blender_Image12_Ichthyosaur.png "Ichthyosaur")
 
-![IchRend](https://github.com/rpdearden/Miscellany/blob/master/How-to/Images/Blender_Image13_IchRend.png "IchRend")
+![IchRend](https://github.com/rpdearden/Miscellany/blob/master/Tutorials/Images/Blender_Image13_IchRend.png "IchRend")
 
 
 ****
@@ -174,7 +174,7 @@ Then hit render, and you have created an image of the Lapworth ichthyosaur! Cong
 **Further reading/watching**
 This was a very quick whizz through Blender, but you should be able to use the setup here to make images of any 3D fossil material you might find.
 Blender can do all sorts that we didn't even touch here: sculpting, modelling, animating, and it can all be scripted with python.
-If you're interested in doing more Blender a very good start is the famous donut tutorial [famous donut tutorial by BlenderGuru](https://www.youtube.com/watch?v=TPrnSACiTJ4)from BlenderGuru (all his stuff is good).
+If you're interested in doing more Blender a very good start is the famous donut tutorial [famous donut tutorial by BlenderGuru](https://www.youtube.com/watch?v=TPrnSACiTJ4) (all his stuff is good).
 It takes you through lots of basic modelling/materials stuff that we didn't really cover here.
 Other than that there are loads of good blender learning materials on Youtube and elsewhere.
 E.g. if you want to make a turntable animation like I showed you at the start of the workshop then google Blender turntable animation and you will be spoiled for choice.
