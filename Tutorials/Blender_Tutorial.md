@@ -102,6 +102,7 @@ In this view press g, then z, then z again to scooch the camera towards and away
 
 ![Camera](https://github.com/rpdearden/Miscellany/blob/master/Tutorials/Images/Blender_Image8_Camera.png "Camera")
 
+****
 
 **Scene Organisation**
 Our scene is now set up and we ar ready to start making beautiful renders.
@@ -154,15 +155,17 @@ This is controlled in exactly the same way: change the world colour to black, so
 
 **Protoichthyosaurus***
 So now we have to tools to render a real bona fide fossil.
-You should have Protoichthyosaurus on your computer as a Wavefront file.
-Hide Suzanne and import Protoichthyosaurus with File->Import->Wavefront(.obj)
+You should have *Protoichthyosaurus* on your computer as a Wavefront file.
+Hide Suzanne and import *Protoichthyosaurus* with File->Import->Wavefront(.obj)
 Name it something sensible and put it in a collection.
 Scale, move and get the ichthyosaur in front of the camera using the hotkeys: use camera view to check it's in the right place.
 We can use the existing lights setup you made for Suzanne.
-Depending on what viewport you're in you'll notice that Protoichthyosaurus imports with a texture because its a Wavefront file.
+Depending on what viewport you're in you'll notice that *Protoichthyosaurus* imports with a texture because its a Wavefront file.
 You can examine this texture in the shading panel: notice the node setup is a bit more complex that what we had for Suzanne.
 If you wanted you could abandon the texture and make it purple or whatever by swapping the setup for a Principled BSDF.
 Then hit render, and you have created an image of the Lapworth ichthyosaur! Congratulations.
+
+
 
 ![Ichthyosaur](https://github.com/rpdearden/Miscellany/blob/master/Tutorials/Images/Blender_Image12_Ichthyosaur.png "Ichthyosaur")
 
