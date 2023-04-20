@@ -76,7 +76,7 @@ Cubes are boring so the first thing we'll do is delete it: select it and press x
 What's more interesting than cubes?
 Press shift a with your mouse in the 3D viewport and you'll find out.
 Navigate to Mesh > Monkey and click.
-You are now viewing Suzanne, the Blender mascot (note she got added where the cursor is, at the scene origin.)
+Say hello to Suzanne, the Blender mascot (note she got added where the cursor is, at the scene origin.)
 
 ![Suzanne](https://github.com/rpdearden/Miscellany/blob/master/Tutorials/Images/Blender_Image6_Suzanne.png "Suzanne")
 
@@ -181,6 +181,6 @@ If you're interested in doing more Blender a very good start is the famous donut
 It takes you through lots of basic modelling/materials stuff that we didn't really cover here.
 Other than that there are loads of good blender learning materials on Youtube and elsewhere.
 E.g. if you want to make a turntable animation like I showed you at the start of the workshop then google Blender turntable animation and you will be spoiled for choice.
-Feel free to get in touch if there's something specific you want to do either by giving me a knock in G27 or by email.
+Feel free to get in touch if there's something specific you want to do either by coming to find me or dropping me an email at richard.dearden(at)naturalis.nl.
 Happy Blending!
 ****
