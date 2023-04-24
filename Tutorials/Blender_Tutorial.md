@@ -36,8 +36,8 @@ Because it is under constant development Blender is constantly being updated wit
 
 **Too many menus**
 As you load in Blender you'll see a beautiful splash screen: the art (made in Blender) is made by a member of the Blender community and changes with every version.
-Click off it and you'll get a default scene.
-If this is your first time it might be a bit overwhelming, but basically to start with you only need to worry about the layout tab and its 3 main sections: the 3D viewport, the outliner, and the properties menu.
+* Click off it and you'll get a default scene.
+* If this is your first time it might be a bit overwhelming, but basically to start with you only need to worry about the layout tab and its 3 main sections: the 3D viewport, the outliner, and the properties menu.
 
 ![Layout](https://github.com/rpdearden/Miscellany/blob/master/Tutorials/Images/Blender_Image2_Layout.png "Layout")
 
