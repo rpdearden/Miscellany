@@ -1,4 +1,4 @@
-**Making images of 3D palaeontological figures in Blender**
+# Making images of 3D palaeontological figures in Blender
 This is an introduction to using Blender for making images of 3D models which can be used for scientific figures.
 It is aimed at someone with no experience of Blender, and so will take a fairly direct path to doing the above, ignoring many Blender mysteries along the way.
 Hopefully by the end though you'll be able to go off and take images of any 3D models you desire, palaeontological or otherwise, and will have enough of a basic understanding to start looking into more complex things.
