@@ -9,11 +9,14 @@
 * Import models
 * Scale to correct size using scale bar
 * Change units to micrometers to do this if necessary and manusally scale with shift key
+* Make sure scale is applied
+* Make sure units are back in meters 
 * Batch export as stls using Batch export -> Object dropdown option (not currently possible for plys)
-* Make sure the "scene unit" box is ticked 
+* Make sure the "scene unit" box is ticked
+
 ***
 **In MorphoDig**
 * Import scaled stls 
 * Save as project
-* RGB colour codes can be copied and pasted into the .NGP file 
+* RGB colour codes can be copied and pasted into the .ntw file 
 * Add a .tag file to label colours
