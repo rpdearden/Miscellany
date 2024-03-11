@@ -12,7 +12,7 @@
 * Batch export as stls using Batch export -> Object dropdown option (not currently possible for plys)
 * Make sure the "scene unit" box is ticked 
 ***
-**In DigiMorph**
+**In MorphoDig**
 * Import scaled stls 
 * Save as project
 * RGB colour codes can be copied and pasted into the .NGP file 
