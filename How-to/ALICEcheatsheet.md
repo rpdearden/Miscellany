@@ -34,6 +34,21 @@ squeue --start -u <username>
 seff <job ID>
 ```
 
+**Look at job resources**
+```
+seff <job ID>
+```
+
+**Cancel job**
+```
+scancel <job ID>
+```
+
+**Look at max. memory resources used for job**
+```
+sacct -j <job ID> -o "JobID,JobName,MaxRSS,Elapsed"
+```
+
 **make directory**
 ```
 mkdir -p $HOME/user_guide_tutorials/first_bash_job
