@@ -71,11 +71,12 @@ majority ;
 map ;
 ```
 **Saving trees**
-* tnt does this weirdly, you have to open, export, and close a tree file. Below will export both a tree file and a nexus file with matrix + trees
+* tnt does this weirdly, you have to open, export, and close a tree file. Below will export all trees in memory to a tree file and a nexus file with matrix + trees
 ```
-tsave *trees.tre
-export *trees.nex
+tsave = *trees.tre
 tsave/;
+export *trees.nex
+
 ```
 **Print majority svg**
 * NOTE: if you don't clear ttags at the end (ttags -;) it will stack all recorded ttags and confuse you
